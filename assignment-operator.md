@@ -177,7 +177,7 @@ Do the names `target_list` and `expression_list` look familiar? You saw them in 
 ### Standard rules for assignments
 
 The Language Reference says
-> *The for statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable object ... Each item in turn is assigned to the target list using the **standard rules for assignments** *
+> The for statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable object ... Each item in turn is assigned to the target list using the **standard rules for assignments**
 
 You already know the **standard rules for assignments**. You learned them earlier when we talked about the `=` operator. They are
 * assignment to a single target
