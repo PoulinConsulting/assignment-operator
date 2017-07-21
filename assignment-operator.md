@@ -145,7 +145,7 @@ x, *y, z = 1, 2, 3, 4
 
 ## Test your knowledge
 
-Is there any difference between the variables `b` and `*b` in these two statemens? If so, what is it?
+Is there any difference between the variables `b` and `*b` in these two statements? If so, what is it?
 ```
 (a, b, c) = 1, 2, 3
 
