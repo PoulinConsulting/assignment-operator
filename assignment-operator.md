@@ -158,7 +158,7 @@ a, b = ([1, 2], [3, 4])
 # a == [1, 2]
 # b == [3, 4]
 
-a, (b, c) = (1, [2, 3])
+(a, [b, c]) = (1, [2, 3])
 # a == 1
 # b == 2
 # c == 3
@@ -166,7 +166,7 @@ a, (b, c) = (1, [2, 3])
 
 ## For loops
 
-Here is the syntax of a `for` statement
+Now that you know all about assignments, it's time to look at `for` loops. Let's examine the syntax of the `for` statement
 
 ```
 for_stmt ::=  "for" target_list "in" expression_list ":" suite
@@ -174,7 +174,7 @@ for_stmt ::=  "for" target_list "in" expression_list ":" suite
 ```
 Do the symbols `target_list` and `expression_list` look familiar? You saw them earlier in the syntax of the assignment statement.
 
-Do you realize what this means? ***Everything you've just learned about assignments and nested targets also applies to for loops.***
+This has massive implications. ***Everything you've just learned about assignments and nested targets also applies to for loops.***
 
 ### Standard rules for assignments
 
