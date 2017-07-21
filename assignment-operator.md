@@ -143,11 +143,17 @@ x, *y, z = 1, 2, 3, 4
 # y == [2,3]
 ```
 
+## Test your knowledge
+
+Is there any difference between the variables `b` and `*b` in these two statemens? If so, what is it?
+```
+(a, b, c) = 1, 2, 3
+
+(a, *b, c) = 1, 2, 3
+```
+
 
 ## Unpacking nested data
-
-
-
 ### Defining nested target lists with ( ) and [ ]
 
 Target lists can be nested by enclosing the sub-list in either ( ) or [ ]. 
