@@ -9,12 +9,12 @@ Second, you'll discover how the `for` statement unpacks data using the same rule
 
 ## BNF notation
 The [Python Language Reference](https://docs.python.org/2.7/reference/index.html) defines all the rules for the assignment statement using a modified form of [Backus Naur notation](http://cuiwww.unige.ch/db-research/Enseignement/analyseinfo/AboutBNF.html).  The Language Reference [explains how to read](https://docs.python.org/2.7/reference/introduction.html#notation) BNF notation. In short, 
-* *** symbol_name ::= *** starts the definition of a symbol
-* *** ( ) *** is used to group symbols
-* *** + *** means appearing one or more times
-* *** (a|b) *** means either a or b 
-* *** [ ] *** means optional
-* *** "text" *** means the literal text. For example, ***","*** means a literal comma character.
+* ***symbol_name ::=*** starts the definition of a symbol
+* ***( )*** is used to group symbols
+* ***+*** means appearing one or more times
+* ***(a|b)*** means either a or b 
+* ***[ ]*** means optional
+* ***"text"*** means the literal text. For example, ***","*** means a literal comma character.
 
 
 
