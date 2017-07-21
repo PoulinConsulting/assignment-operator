@@ -112,11 +112,12 @@ Unpacking works with many iterable types
 * comprehensions
 * file handles
 
-## Combining multiple assignment with unpacking
-Can you explain what this code does?
+## Test your knowledge
+What are the values of a, b, c, x, y, and z?
 ```
 (a, b, c) = (x, y, z) = 1, 2, 3
 ```
+Hint: this expression uses both multiple assignment and unpacking.
 
 ## Starred targets (3.x only)
 
