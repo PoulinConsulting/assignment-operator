@@ -205,7 +205,7 @@ In the introduction, I promised I would explain this code
 for i,value in enumerate(values):
    ...
 ```
-At this point, you know enough to figure it out yourself
+Now you know enough to figure it out yourself
 * enumerate returns a sequence of `(number, item)` tuples
 * the for statement performs the assignment `i,value = (number, item)` by unpacking the tuple
 
