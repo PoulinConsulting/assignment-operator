@@ -1,20 +1,22 @@
 # Introduction
 
-Most of the time, an assignment statement assigns a single value to a single variable. But Python's `=` operator does more than just simple assignment. Used as an *iterator*, it can manipulate complex data structures with one or two lines of code.
+I wrote this article in two parts.
 
-The `for` statement also assigns values to variables. In the second part of this article I'll show you how to apply your new understanding of assignment to the `for` statement.
+First, you'll see how Python's `=` operator iterates over complex data structures.
+
+Second, you'll discover how the `for` statement unpacks data using the same rules as the `=` operator.
 
 
 ## BNF notation
 The [Python Language Reference](https://docs.python.org/2.7/reference/index.html) defines all the rules for the assignment statement.
 
-Python's grammar is defined using a modified form of [Backus Naur notation](http://cuiwww.unige.ch/db-research/Enseignement/analyseinfo/AboutBNF.html), which is similar to how regular expressions are written.  The Language Reference [explains how to read](https://docs.python.org/2.7/reference/introduction.html#notation) BNF notation. In short, 
-* ***symbol_name ::=*** starts the definition of a symbol
-* ***( )*** is used to group symbols
-* ***+*** means appearing one or more times
-* ***(a|b)*** means either a or b 
-* ***[ ]*** means optional
-* ***"text"*** means the literal text. For example, ***","*** means a literal comma character.
+Python's grammar is defined using a modified form of [Backus Naur notation](http://cuiwww.unige.ch/db-research/Enseignement/analyseinfo/AboutBNF.html).  The Language Reference [explains how to read](https://docs.python.org/2.7/reference/introduction.html#notation) BNF notation. In short, 
+* *** symbol_name ::= *** starts the definition of a symbol
+* *** ( ) *** is used to group symbols
+* *** + *** means appearing one or more times
+* *** (a|b) *** means either a or b 
+* *** [ ] *** means optional
+* *** "text" *** means the literal text. For example, ***","*** means a literal comma character.
 
 
 
@@ -57,16 +59,21 @@ target          ::=  identifier
 
 
 
-## Multiple assignment
+## Multiple assignments
 
-You can assign the same value to multiple targets.
+An assignment statement usually assigns one value to one variable
+```
+x = 0
+```
+
+but Python can combine these three assignments
 
 ```
 x = 0
 y = 0
 z = 0
 ```
-can be written as
+into one expression
 ```
 x = y = z = 0
 ```
@@ -78,17 +85,17 @@ A target list is two or more targets separated by commas.
 ```
 target, target, target, ... =
 ```
-Having more than one target in a target list lets you *unpack* data like so
+A target list lets you *unpack* data like so
 
 ```
 x, y, z = 1, 2, 3
 ```
 
-It's important to realize that 
+Remember that 
 ```
 1, 2, 3
 ```
-actually creates a *tuple*. This lead us to  the next point.
+creates a *tuple*. This leads us to the next point.
 
 ## Iterable objects
 
@@ -96,9 +103,9 @@ Only *iterable objects* can be unpacked. When Python sees
 ```
 x, y, z = 1, 2, 3
 ```
-it *iterates* over the (1, 2, 3) tuple and assigns the values to the variables x, y, and z.
+it *iterates* over the tuple and assigns its three values to x, y, and z.
 
-Python has many kinds of iterable objects, and all of them can be unpacked
+Unpacking works with many iterable types
 * tuples
 * lists
 * dictionaries
@@ -110,14 +117,14 @@ Python has many kinds of iterable objects, and all of them can be unpacked
 
 ## Starred targets (3.x only)
 
-In Python 2.x the number of targets in the list must match the number of values in the iterable object.
+In Python 2.x the number of targets and values must match.
 
 This code will produce an error
 ```
 x, y, z = 1, 2, 3, 4   # too many values
 ```
 
-Python 3.x introduced the idea of *starred variables*. Values are assigned to normal (unstarred) targets and any left over values are collected into a list and assigned to the starred variable.
+Python 3.x introduced *starred variables*. Python first assigns values to the unstarred targets. After that, it forms a list of any remaining values and assigns it to the starred variable.
 
 This code does not produce an error
 ```
@@ -155,11 +162,11 @@ a, (b, c) = (1, [2, 3])
 
 ## For loops
 
-Everthing you've just learned about assignment and nested targets can be applied to for loops.
+Everything you've just learned about assignments and nested targets also applies to for loops.
 
 According to the [Language Reference](https://docs.python.org/3/reference/compound_stmts.html#the-for-statement)
 
->The `for` statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable object:
+>The `for` statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable objects:
 
 
 ### Grammar
@@ -170,14 +177,14 @@ Here is the syntax of a `for` statement
 for_stmt ::=  "for" target_list "in" expression_list ":" suite
               ["else" ":" suite]
 ```
-Do the names `target_list` and `expression_list` look familiar? You saw them in the syntax of the assignment statement.
+Do the symbols `target_list` and `expression_list` look familiar? You saw them in the syntax of the assignment statement.
 
 ## For loop variables
 
 ### Standard rules for assignments
 
 The Language Reference says
-> The for statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable object ... Each item in turn is assigned to the target list using the **standard rules for assignments**
+> The for statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable objects ... Each item, in turn, is assigned to the target list using the **standard rules for assignments**
 
 You already know the **standard rules for assignments**. You learned them earlier when we talked about the `=` operator. They are
 * assignment to a single target
@@ -223,7 +230,7 @@ for (neg, pos) in zip(negative_numbers, positive_numbers):
 -4 4
 -5 5
 ```
-What about starred variables? Here's an example that unpacks strings into separate characters. The underscore character is often used when we need a dummy placeholder variable.
+What about starred variables? This example finds a string's first and last character. The underscore character is often used when we need a dummy placeholder variable.
 ```
 animals = [
     'bird',
@@ -241,5 +248,4 @@ e t
 
 ## Conclusion
 
-Python has some sophisticated syntax for working with nested data structures, but this syntax can be confusing if you've never seen it before. I hope I've given you a clear picture of how it all works.
-
+You can unpack nested data structures in sophisticated ways, but the syntax might seem complicated. I hope I've given you a clear picture of how it all works.
