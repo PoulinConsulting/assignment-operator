@@ -76,7 +76,6 @@ into one expression
 x = y = z = 0
 ```
 
-
 ## Target lists
 
 A target list is two or more targets separated by commas.
@@ -112,6 +111,12 @@ Unpacking works with many iterable types
 * generators
 * comprehensions
 * file handles
+
+## Combining multiple assignment with unpacking
+Can you explain what this code does?
+```
+(a, b, c) = (x, y, z) = 1, 2, 3
+```
 
 ## Starred targets (3.x only)
 
