@@ -25,7 +25,7 @@ The [Python Language Reference](https://docs.python.org/2.7/reference/index.html
 
 
 
-Here is the complete grammar for the [assignment statement](https://docs.python.org/2.7/reference/simple_stmts.html#assignment-statements).
+Here is the complete grammar for the [assignment statement](https://docs.python.org/2.7/reference/simple_stmts.html#assignment-statements). It looks complicated because Python allows many different forms of assignment.
 
 ---
 An ***assignment statement*** consists of 
