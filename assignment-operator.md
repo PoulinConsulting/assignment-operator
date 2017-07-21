@@ -7,9 +7,7 @@ Have you ever seen the `enumerate` function being used like this?
 for i,value in enumerate(values):
    ...
 ```
-Why does it have two variables, and how are they being set?
-
-This article answers that question and many more. I wrote it in two parts.
+Why does it have two variables, and how are they being set? This article answers that question and many more. I wrote it in two parts
 
 * First, you'll see how Python's `=` operator iterates over complex data structures.
 
