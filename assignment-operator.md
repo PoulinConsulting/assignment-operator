@@ -2,12 +2,18 @@
 # How To Unpack Data With The = Operator And For Loops
 
 # Introduction
+Have you ever seen the `enumerate` function being used like this?
+```
+for i,value in enumerate(values):
+   ...
+```
+Why does it have two variables, and how are they being set?
 
-I wrote this article in two parts.
+This article answers that question and many more. I wrote it in two parts.
 
-First, you'll see how Python's `=` operator iterates over complex data structures.
+* First, you'll see how Python's `=` operator iterates over complex data structures.
 
-Second, you'll discover how the `for` statement unpacks data using the same rules as the `=` operator.
+* Second, you'll discover how the `for` statement unpacks data using the same rules as the `=` operator.
 
 
 ## BNF notation
