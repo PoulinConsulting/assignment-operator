@@ -1,3 +1,6 @@
+
+# How To Unpack Data With The = Operator And For Loops
+
 # Introduction
 
 I wrote this article in two parts.
