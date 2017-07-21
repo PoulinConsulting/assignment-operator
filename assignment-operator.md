@@ -200,10 +200,18 @@ You already know the **standard rules for assignments**. You learned them earlie
 * assignment to a nested target list
 * assignment to a starred variable (Python 3.x only)
 
+In the introduction, I promised I would explain this code
+```
+for i,value in enumerate(values):
+   ...
+```
+At this point, you know enough to figure it out yourself
+* enumerate returns a sequence of `(number, item)` tuples
+* the for statement performs the assignment `i,value = (number, item)` by unpacking the tuple
 
 ### Examples
 
-I'll finish by showing you a few examples. 
+I'll finish by showing you a few more examples. 
 
 ```
 # test data
