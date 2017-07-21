@@ -166,24 +166,15 @@ a, (b, c) = (1, [2, 3])
 
 ## For loops
 
-Everything you've just learned about assignments and nested targets also applies to for loops.
-
-According to the [Language Reference](https://docs.python.org/3/reference/compound_stmts.html#the-for-statement)
-
->The `for` statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable objects:
-
-
-### Grammar
-
 Here is the syntax of a `for` statement
 
 ```
 for_stmt ::=  "for" target_list "in" expression_list ":" suite
               ["else" ":" suite]
 ```
-Do the symbols `target_list` and `expression_list` look familiar? You saw them in the syntax of the assignment statement.
+Do the symbols `target_list` and `expression_list` look familiar? You saw them earlier in the syntax of the assignment statement.
 
-## For loop variables
+Do you realize what this means? ***Everything you've just learned about assignments and nested targets also applies to for loops.***
 
 ### Standard rules for assignments
 
