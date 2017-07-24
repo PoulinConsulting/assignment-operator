@@ -94,11 +94,11 @@ target          ::=  identifier
 Packing and unpacking are symmetrical and they can be **nested** to any level. Nested objects are unpacked ***recursively*** by iterating over the nested objects and assigning their values to the nested targets. Here are some examples
 
 ```
-a, b = 1, 2
+(a, b) = (1, 2)
 # a == 1
 # b == 2
 
-a, b = ([1, 2], [3, 4])
+(a, b) = ([1, 2], [3, 4])
 # a == [1, 2]
 # b == [3, 4]
 
