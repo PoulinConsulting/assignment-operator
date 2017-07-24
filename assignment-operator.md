@@ -91,35 +91,7 @@ target          ::=  identifier
                      | subscription
                      | slicing
 ```
-Packing and unpacking are symmetrical and they can be **nested** to any level. You can use target lists to *unpack* data like so
-
-```
-# a flat data structure
-flat_data = [1, 2, 3]
-[x, y, z] = flat_data
-
-# a nested data structure
-nested_data = [(1,2), (100, 200)]
-[(a, b), (c, d)] = nested_data
-```
-
-Remember, lists and tuples are *iterable*. This is important because only *iterable objects* can be unpacked. When Python sees
-```
-x, y, z = 1, 2, 3
-```
-it *iterates* over the tuple and assigns its three values to x, y, and z.
-
-Unpacking works with many iterable types
-* tuples
-* lists
-* dictionaries
-* strings
-* ranges
-* generators
-* comprehensions
-* file handles
-
-Python assigns a nested sequence to a nested target list by iterating over the nested sequence and assigning its values to the nested targets. Nested arget lists are unpacked ***recursively***. Here are some more examples
+Packing and unpacking are symmetrical and they can be **nested** to any level. Nested objects are unpacked ***recursively***. Python assigns nested objects to nested target lists by iterating over the nested objects and assigning their values to the nested targets. Here are some more examples
 
 ```
 a, b = 1, 2
@@ -135,6 +107,17 @@ a, b = ([1, 2], [3, 4])
 # b == 2
 # c == 3
 ```
+
+Unpacking works with any iterable object. You can unpack
+* tuples
+* lists
+* dictionaries
+* strings
+* ranges
+* generators
+* comprehensions
+* file handles
+
 ## Test your knowledge
 What are the values of a, b, c, x, y, and z?
 ```
