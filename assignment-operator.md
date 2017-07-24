@@ -75,7 +75,7 @@ but Python can combine these three assignments into one expression
 x = y = z = 0
 ```
 
-## Flip the script with *target lists*
+## Flipping the script with *target lists*
 You've probably seen list [ ] and ( ) on the right side of an assignment statement to **pack** values into a data structure. But did you know that you can literally *flip the script* by writing a list of variables on the left side of the = sign? 
 
 Using [ ] or ( ) on the left side of an = sign is called a ***target list***. For example
