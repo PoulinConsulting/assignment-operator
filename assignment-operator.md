@@ -84,6 +84,15 @@ Using [ ] or ( ) on the left side of an = sign is called a ***target list***. Fo
 or
 (target, target, target, ...) = 
 ```
+Remember, the grammar rules allow [ ] and ( ) characters as part of a target
+```
+target          ::=  identifier
+                     | "(" target_list ")"
+                     | "[" [target_list] "]"
+                     | attributeref
+                     | subscription
+                     | slicing
+```
 Packing and unpacking are symmetrical and they can be **nested** to any level. You can use target lists to *unpack* data like so
 
 ```
