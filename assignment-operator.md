@@ -121,7 +121,7 @@ Unpacking works with any iterable object. You can unpack
 ## Test your knowledge
 What are the values of a, b, c, x, y, and z?
 ```
-(a, b, c) = (x, y, z) = 1, 2, 3
+a = (x, y, z) = 1, 2, 3
 ```
 Hint: this expression uses both multiple assignment and unpacking.
 
