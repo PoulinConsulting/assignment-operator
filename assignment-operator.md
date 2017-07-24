@@ -60,6 +60,7 @@ target          ::=  identifier
                      | slicing
 ```
 ---
+As you'll see, this syntax allows you to take some clever shortcuts in your code.
 
 ## Multiple assignments
 
