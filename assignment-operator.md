@@ -119,7 +119,7 @@ Unpacking works with any iterable object. You can unpack
 * file handles
 
 ## Test your knowledge
-What are the values of a, b, c, x, y, and z?
+What are the values of a, x, y, and z?
 ```
 a = (x, y, z) = 1, 2, 3
 ```
