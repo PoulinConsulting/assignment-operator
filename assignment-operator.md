@@ -91,7 +91,7 @@ target          ::=  identifier
                      | subscription
                      | slicing
 ```
-Packing and unpacking are symmetrical and they can be **nested** to any level. Nested objects are unpacked ***recursively***. Python assigns nested objects to nested target lists by iterating over the nested objects and assigning their values to the nested targets. Here are some more examples
+Packing and unpacking are symmetrical and they can be **nested** to any level. Nested objects are unpacked ***recursively*** by iterating over the nested objects and assigning their values to the nested targets. Here are some more examples
 
 ```
 a, b = 1, 2
