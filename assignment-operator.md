@@ -89,7 +89,7 @@ Packing and unpacking are symmetrical and they can be **nested** to any level. Y
 ```
 # a flat data structure
 flat_data = [1, 2, 3]
-[x, y, z] = data
+[x, y, z] = flat_data
 
 # a nested data structure
 nested_data = [(1,2), (100, 200)]
