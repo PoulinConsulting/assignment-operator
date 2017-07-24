@@ -76,7 +76,7 @@ x = y = z = 0
 ```
 
 ## Flipping the script with *target lists*
-I'm sure you've written [ ] and ( ) on the right side of an assignment statement to pack values into a data structure. But did you know that you can literally ***flip the script*** by writing [ ] and ( ) on the left side of the = sign? For example
+I'm sure you've written [ ] and ( ) on the right side of an assignment statement to pack values into a data structure. But did you know that you can literally ***flip the script*** by writing [ ] and ( ) on the left side? For example
 ```
 [target, target, target, ...] =
 or
